@@ -18,20 +18,24 @@ In our code, two model version are included:
 
 ### Training CSNet
 
-Editing the path of training data.
+Editing the path of training data in file `train.py`.
 
 * For CSNet training in terms of subrate=0.1:
+
 `Python train.py --sub_rate=0.1 --block_size=32`
 
 ### Testing CSNet
 
-Editing the path of trained model.
+Editing the path of trained model in file `test.py`.
 
 * For CSNet testing in terms of subrate=0.1:
+
 `python test.py --sub_rate=0.1 --block_size=32`
 
 ## CSNet results
+### Subjective results
 
 ![image](https://github.com/WenxueCui/CSNet-Pytorch/raw/master/images/results.jpg)
 
+### Objective results
 ![image](https://github.com/WenxueCui/CSNet-Pytorch/raw/master/images/table.jpg)
