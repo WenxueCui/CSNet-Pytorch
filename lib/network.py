@@ -109,6 +109,51 @@ class CSNet(nn.Module):
         self.upsampling = nn.Conv2d(int(np.round(blocksize*blocksize*subrate)), blocksize*blocksize, 1, stride=1, padding=0)
 
         # reconstruction network
+        self.conv1 = nn.Sequential(
+            nn.Conv2d(1, 64, kernel_size=3, padding=1),
+            nn.PReLU()
+        )
+        self.conv2 = nn.Sequential(
+            nn.Conv2d(64, 64, kernel_size=3, padding=1),
+            nn.PReLU()
+        )
+        self.conv3 = nn.Sequential(
+            nn.Conv2d(64, 64, kernel_size=3, padding=1),
+            nn.PReLU()
+        )
+        self.conv4 = nn.Sequential(
+            nn.Conv2d(64, 64, kernel_size=3, padding=1),
+            nn.PReLU()
+        )
+        self.conv5 = nn.Conv2d(64, 1, kernel_size=3, padding=1)
+
+    def forward(self, x):
+        x = self.sampling(x)
+        x = self.upsampling(x)
+        x = My_Reshape_Adap(x, self.blocksize) # Reshape + Concat
+
+        block1 = self.conv1(x)
+        block2 = self.conv2(block1)
+        block3 = self.conv3(block2)
+        block4 = self.conv4(block3)
+        block5 = self.conv5(block4)
+
+        return block5
+    
+    
+#  code of CSNet_Enhanced (Enhanced version of CSNet)
+class CSNet_Enhanced(nn.Module):
+    def __init__(self, blocksize=32, subrate=0.1):
+
+        super(CSNet_Enhanced, self).__init__()
+        self.blocksize = blocksize
+
+        # for sampling
+        self.sampling = nn.Conv2d(1, int(np.round(blocksize*blocksize*subrate)), blocksize, stride=blocksize, padding=0, bias=False)
+        # upsampling
+        self.upsampling = nn.Conv2d(int(np.round(blocksize*blocksize*subrate)), blocksize*blocksize, 1, stride=1, padding=0)
+
+        # reconstruction network
         self.block1 = nn.Sequential(
             nn.Conv2d(1, 64, kernel_size=7, padding=3),
             nn.PReLU()
