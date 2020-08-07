@@ -1,9 +1,10 @@
 # CSNet-Pytorch
 
 Pytorch code for paper 
+
 * "Deep Networks for Compressed Image Sensing" ICME2017
 
-* "Image Compressed Sensing Using Convolutional Neural Network" TIP2020
+* "Image Compressed Sensing Using Convolutional Neural Network" TIP2019
 
 ## Requirements and Dependencies
 
@@ -15,7 +16,7 @@ Pytorch code for paper
 
 In our code, two model version are included:
 
-* simple version of CSNet (Similar with paer)
+* simple version of CSNet (Similar with paper ICME2017)
 * Enhanced version of CSNet (local skip connection + global skip connection + resudial learning)
 
 ## How to Run
