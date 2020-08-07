@@ -22,18 +22,18 @@ In our code, two model version are included:
 ## How to Run
 
 ### Training CSNet
-Preparing the dataset for training
+* Preparing the dataset for training
 
-Editing the path of training data in file `train.py`.
+* Editing the path of training data in file `train.py`.
 
 * For CSNet training in terms of subrate=0.1:
 
 `python train.py --sub_rate=0.1 --block_size=32`
 
 ### Testing CSNet
-Preparing the dataset for testing
+* Preparing the dataset for testing
 
-Editing the path of trained model in file `test.py`.
+* Editing the path of trained model in file `test.py`.
 
 * For CSNet testing in terms of subrate=0.1:
 
