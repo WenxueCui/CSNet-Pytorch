@@ -50,7 +50,7 @@ In our code, two model version are included:
 ## Additional instructions
 
 * For training data, you can choose any natural image dataset.
-* The training data is very important, if you can not achieve ideal result, maybe you can focus on the augmentation of data or the structure of the network.
+* The training data is very important, if you can not achieve ideal result, maybe you can focus on the augmentation of training data or the structure of the network.
 * If you like this repo, Star or Fork to support my work. Thank you.
-* If you have any problem for this code, you can email: wenxuecui@stu.hit.edu.cn
+* If you have any problem for this code, please email: wenxuecui@stu.hit.edu.cn
 
