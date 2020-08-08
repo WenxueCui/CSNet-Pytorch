@@ -28,7 +28,7 @@ In our code, two model version are included:
 
 * For CSNet training in terms of subrate=0.1:
 
-`python train.py --sub_rate=0.1 --block_size=32`
+```python train.py --sub_rate=0.1 --block_size=32```
 
 ### Testing CSNet
 * Preparing the dataset for testing
@@ -37,7 +37,7 @@ In our code, two model version are included:
 
 * For CSNet testing in terms of subrate=0.1:
 
-`python test.py --sub_rate=0.1 --block_size=32`
+```python test.py --sub_rate=0.1 --block_size=32```
 
 ## CSNet results
 ### Subjective results
