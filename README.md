@@ -10,7 +10,8 @@ Pytorch code for paper
 
 * Ubuntu 16.04 CUDA 10.0
 * Python3 （Testing in Python3.5）
-* Pytorch 1.1.0   Torchvision 0.2.2
+* Pytorch 1.1.0   
+* Torchvision 0.2.2
 
 ## Details of Implementations
 
