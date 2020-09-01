@@ -40,6 +40,10 @@ In our code, two model version are included:
 
 ```python test.py --sub_rate=0.1 --block_size=32```
 
+* For CSNet testing (new testing code) in terms of subrate=0.1:
+
+```python test_new.py --cuda --sub_rate=0.1 --block_size=32```
+
 ## CSNet results
 ### Subjective results
 
