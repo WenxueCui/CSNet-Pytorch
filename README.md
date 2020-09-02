@@ -34,9 +34,9 @@ In our code, two model version are included:
 ### Testing CSNet
 * Preparing the dataset for testing
 
-* Editing the path of trained model in file `test.py`.
+* Editing the path of trained model in file `test.py` and `test_new.py`.
 
-* For CSNet testing in terms of subrate=0.1:
+* For CSNet testing in terms of subrate=0.1: (ps: For this testing code, there is a big gap compared with the result in paper. And I am confused about it. If you know the reason, please tell me. Thanks very much!)
 
 ```python test.py --sub_rate=0.1 --block_size=32```
 
